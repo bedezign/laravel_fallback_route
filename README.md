@@ -59,7 +59,7 @@ Taking the example above, imagine you are requesting `/api/v2/orders`:
 
 Because the fallback has been configured to replace `/v2` by `/v1` it will generate a new `Request` that has `/api/v1/orders` as the requested Uri. It will then query the `RouteCollection` for a match (outside of the `Router`. 
 
-If a match is returned, the `FakeRoute` will copy over all class properties so it can impersonate the matched route and it will behave just like the other route when executed.
+If a match is returned, the `FallbackRoute` will copy over all class properties so it can impersonate the matched route and it will behave just like the other route when executed.
 
 ## Of some importance
 
