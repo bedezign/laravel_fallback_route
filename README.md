@@ -77,7 +77,7 @@ Why copy over all matched route properties you might wonder?
 There is no way (that I know of) to replace the route being queried for a match with another route (it wouldn't make sense). 
 The only solution is to behave like the actual matched route. 
 
-You could alternatively not derivie from `Route` (so that we could use `__call` to proxy everything to the matched route), but this brings a whole new level of dificulties (like `artisan route:*` not working and so on). I've opted to do it like this as this is the lease invasive. 
+You could alternatively not derive from `Route` (so that we could use `__call` to proxy everything to the matched route), but this brings a whole new level of dificulties (like `artisan route:*` not working and so on). I've opted to do it like this as this is the least invasive. 
 
 ### Position
 As far as I know all routes are matched in order of adding them to the `Router`, be sure to add the fallback at the end of your API scheme, or it will be triggered earlier and produce unexpected results.
